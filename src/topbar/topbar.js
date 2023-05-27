@@ -101,7 +101,7 @@ export default observer(({ store }) => {
               <NavbarDivider />
             </>
           )} */}
-/*
+{/*
           <Button
             intent="primary"
             icon={<BisDiamond className="bp4-icon" />}
@@ -159,13 +159,13 @@ export default observer(({ store }) => {
               <FaTwitter className="bp4-icon" style={{ fontSize: '20px' }} />
             }
           ></AnchorButton>
-          */
+          */}
           <NavbarDivider />
           <DownloadButton store={store} />
-           /*
+            {/*
           <UserMenu store={store} project={project} />
           {/* <NavbarHeading>Polotno Studio</NavbarHeading> */}
-*/
+*/}
         </Navbar.Group>
       </NavInner>
     </NavbarContainer>
