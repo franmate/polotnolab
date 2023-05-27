@@ -56,14 +56,7 @@ export default observer(({ store }) => {
       <NavInner>
         <Navbar.Group align={Alignment.LEFT}>
           <FileMenu store={store} project={project} />
-          <Button
-            text="My designs"
-            intent="primary"
-            onClick={() => {
-              project.puterModalVisible = true;
-              // store.openSidePanel('my-designs');
-            }}
-          />
+         
         </Navbar.Group>
         <Navbar.Group align={Alignment.RIGHT}>
           {/* {project.id !== 'local' && (
@@ -101,71 +94,10 @@ export default observer(({ store }) => {
               <NavbarDivider />
             </>
           )} */}
-{/*
-          <Button
-            intent="primary"
-            icon={<BisDiamond className="bp4-icon" />}
-            style={{ backgroundColor: 'rgba(219, 30, 186, 1)' }}
-            onClick={async () => {
-              if (!isAuthenticated) {
-                const res = await loginWithPopup();
-              }
-              setModalVisible(true);
-            }}
-          >
-            Chip in!
-          </Button>
-          <SubscriptionModal
-            isOpen={modalVisible}
-            onClose={() => {
-              setModalVisible(false);
-            }}
-            store={store}
-          />
-          <AnchorButton
-            href="https://polotno.com"
-            target="_blank"
-            minimal
-            icon={
-              <BiCodeBlock className="bp4-icon" style={{ fontSize: '20px' }} />
-            }
-          >
-            API
-          </AnchorButton>
 
-          <AnchorButton
-            minimal
-            href="https://discord.gg/W2VeKgsr9J"
-            target="_blank"
-            icon={
-              <FaDiscord className="bp4-icon" style={{ fontSize: '20px' }} />
-            }
-          >
-            Join Chat
-          </AnchorButton>
-          <AnchorButton
-            minimal
-            href="https://github.com/lavrton/polotno-studio"
-            target="_blank"
-            icon={
-              <FaGithub className="bp4-icon" style={{ fontSize: '20px' }} />
-            }
-          ></AnchorButton>
-          <AnchorButton
-            minimal
-            href="https://twitter.com/lavrton"
-            target="_blank"
-            icon={
-              <FaTwitter className="bp4-icon" style={{ fontSize: '20px' }} />
-            }
-          ></AnchorButton>
-          */}
           <NavbarDivider />
           <DownloadButton store={store} />
-            {/*
-          <UserMenu store={store} project={project} />
-          {/* <NavbarHeading>Polotno Studio</NavbarHeading> */}
-*/}
+
         </Navbar.Group>
       </NavInner>
     </NavbarContainer>
