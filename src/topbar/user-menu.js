@@ -56,7 +56,7 @@ export const UserMenu = observer(({ store }) => {
             )}
             {isAuthenticated && (
               <MenuItem
-                text="Logout"
+                text="Saír"
                 icon="log-out"
                 onClick={() => {
                   logout({ returnTo: window.location.origin, localOnly: true });
