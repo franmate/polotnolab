@@ -28,7 +28,7 @@ export const DownloadButton = observer(({ store }) => {
       content={
         <Menu>
           <li class="bp4-menu-header">
-            <h6 class="bp4-heading">File type</h6>
+            <h6 class="bp4-heading">Tipo</h6>
           </li>
           <HTMLSelect
             fill
@@ -47,7 +47,7 @@ export const DownloadButton = observer(({ store }) => {
           {type !== 'html' && (
             <>
               <li class="bp4-menu-header">
-                <h6 class="bp4-heading">Size</h6>
+                <h6 class="bp4-heading">Tamaño</h6>
               </li>
               <div style={{ padding: '10px' }}>
                 <Slider
@@ -92,8 +92,7 @@ export const DownloadButton = observer(({ store }) => {
           {type === 'html' && (
             <>
               <div style={{ padding: '10px', maxWidth: '180px', opacity: 0.8 }}>
-                HTML export is very experimental. If you have issues with it,
-                please report to Anton on discord.
+                A exportación en HTML é experimental.
               </div>
             </>
           )}
@@ -131,7 +130,7 @@ export const DownloadButton = observer(({ store }) => {
               }
             }}
           >
-            Download {type.toUpperCase()}
+            Descargar {type.toUpperCase()}
           </Button>
 
           {/* <MenuItem
