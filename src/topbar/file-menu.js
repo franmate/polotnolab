@@ -26,14 +26,14 @@ export const FileMenu = observer(({ store, project }) => {
             {/* <MenuDivider title={t('toolbar.layering')} /> */}
             <MenuItem
               icon="plus"
-              text="Create new design"
+              text="Crear novo deseño"
               onClick={() => {
                 const ids = store.pages
                   .map((page) => page.children.map((child) => child.id))
                   .flat();
                 const hasObjects = ids?.length;
                 if (hasObjects) {
-                  if (!window.confirm('Remove all content for a new design?')) {
+                  if (!window.confirm('Eliminar o deseño anterior?')) {
                     return;
                   }
                 }
@@ -47,7 +47,7 @@ export const FileMenu = observer(({ store, project }) => {
             {/* {project.id !== 'local' && (
               <MenuItem
                 icon="duplicate"
-                text="Make a copy"
+                text="Facer copia"
                 onClick={() => {
                   project.duplicate();
                 }}
@@ -57,7 +57,7 @@ export const FileMenu = observer(({ store, project }) => {
             <MenuItem
               // icon={<FaFileImport />}
               icon="folder-open"
-              text="Open"
+              text="Abrir"
               onClick={() => {
                 document.querySelector('#load-project').click();
               }}
@@ -65,7 +65,7 @@ export const FileMenu = observer(({ store, project }) => {
             <MenuItem
               // icon={<FaFileExport />}
               icon="floppy-disk"
-              text="Save as"
+              text="Gardar como..."
               onClick={() => {
                 const json = store.toJSON();
 
@@ -81,7 +81,7 @@ export const FileMenu = observer(({ store, project }) => {
 
             <MenuDivider />
             <MenuItem
-              text="About"
+              text="Sobre este aplicativo"
               icon="info-sign"
               onClick={() => {
                 toggleFaq(true);
@@ -91,7 +91,7 @@ export const FileMenu = observer(({ store, project }) => {
         }
         position={Position.BOTTOM_RIGHT}
       >
-        <Button minimal text="File" />
+        <Button minimal text="Arquivo" />
       </Popover2>
       <input
         type="file"
@@ -122,7 +122,7 @@ export const FileMenu = observer(({ store, project }) => {
             }
           };
           reader.onerror = function () {
-            alert('Can not load the project.');
+            alert('Imposible abrir o proxecto.');
           };
           reader.readAsText(input.files[0]);
         }}
@@ -130,7 +130,7 @@ export const FileMenu = observer(({ store, project }) => {
       <Dialog
         icon="info-sign"
         onClose={() => toggleFaq(false)}
-        title="About Polotno Studio"
+        title="Sobre CreaLab"
         isOpen={faqOpened}
         style={{
           width: '80%',
@@ -138,45 +138,9 @@ export const FileMenu = observer(({ store, project }) => {
         }}
       >
         <div className={Classes.DIALOG_BODY}>
-          <h2>What is Polotno Studio?</h2>
+          <h2>Crealab</h2>
           <p>
-            <strong>Polotno Studio</strong> - is a web application to create
-            graphical designs. You can mix image, text and illustrations to make
-            social media posts, youtube previews, podcast covers, business cards
-            and presentations.
-          </p>
-          <h2>Is it Open Source?</h2>
-          <p>
-            Partially. The source code is available in{' '}
-            <a href="https://github.com/lavrton/polotno-studio" target="_blank">
-              GitHub repository
-            </a>
-            . The repository doesn't have full source.{' '}
-            <strong>Polotno Studio</strong> is powered by{' '}
-            <a href="https://polotno.dev/" target="_blank">
-              Polotno SDK project
-            </a>
-            . All core "canvas editor" functionality are implemented by{' '}
-            <strong>polotno</strong> npm package (which is not open source at
-            the time of writing this text).
-          </p>
-          <p>
-            Polotno Studio is build on top of Polotno SDK to provide a
-            desktop-app-like experience.
-          </p>
-          <h2>Who is making Polotno Studio?</h2>
-          <p>
-            My name is Anton Lavrenov{' '}
-            <a href="https://twitter.com/lavrton" target="_blank">
-              @lavrton
-            </a>
-            . I am founder of Polotno project. As the maintainer of{' '}
-            <a href="https://konvajs.org/" target="_blank">
-              Konva 2d canvas framework
-            </a>
-            , I created several similar apps for different companies around the
-            world. So I decided to compile all my knowledge and experience into
-            reusable Polotno project.
+           Este aplicativo utiliza Polotno. Non se permite o uso comercial.
           </p>
         </div>
         <div className={Classes.DIALOG_FOOTER}>
