@@ -10,7 +10,22 @@ import { SubscriptionProvider } from './subscription-context';
 import './index.css';
 import App from './App';
 import './logger';
-
+import { setTranslations } from 'polotno/config';
+import { getTranslations } from 'polotno/config';
+setTranslations({
+  sidePanel: {
+    text: 'Texto',
+    myFonts: 'Fontes',
+    templates: 'Plantillas',
+    photos: 'Fotos',
+    elements: 'Figuras',
+    upload:'Subir imaxe',
+    background: 'Fondo',
+    layers:'capas',
+    resize:'Dimesións'
+  },
+});
+console.log(getTranslations());
 if (window.location.host !== 'studio.polotno.com') {
   console.log(
     `%cWelcome to Polotno Studio! Thanks for your interest in the project!
